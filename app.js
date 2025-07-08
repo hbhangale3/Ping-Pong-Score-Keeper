@@ -32,7 +32,7 @@ p2Button.addEventListener('click',function(e){
     if (j===parseInt(points.value)){
         gameOver=true;
         p2Score.style.color = 'rgb(0, 255, 0)';
-        p1Score.style.Color = 'rgb(255, 0, 0)';
+        p1Score.style.color = 'rgb(255, 0, 0)';
         p1Button.disabled=true;
         p2Button.disabled=true;
     }
