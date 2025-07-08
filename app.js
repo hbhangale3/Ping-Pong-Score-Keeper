@@ -43,8 +43,11 @@ p2Button.addEventListener('click',function(e){
 reset.addEventListener('click', function(e){
     p1Score.innerText=0;
     p2Score.innerText=0;
+    i=0;
+    j=0;
     p1Score.style.color = '';
     p2Score.style.color = '';
     p1Button.disabled=false;
         p2Button.disabled=false;
+        gameOver=false;
 })
