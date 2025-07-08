@@ -9,31 +9,35 @@ const points = document.querySelector('#points');
 
 
 let i=0,j=0;
+let gameOver=false;
 p1Button.addEventListener('click',function(e){
-    if(i<points.value){
+    if(!gameOver){
         i++;
-        p1Score.innerText=i;
-    }else if (p1Score.innerText===points.value && p2Score.innerText<points.value){
+     if (i===parseInt(points.value)){
+        gameOver=true;
         p1Score.style.color = 'rgb(0, 255, 0)';
         p2Score.style.color = 'rgb(255, 0, 0)';
         p1Button.disabled=true;
         p2Button.disabled=true;
     }
+    p1Score.innerText=i;
     
-
+}
 })
 
 p2Button.addEventListener('click',function(e){
-    if(j<points.value){
+    if(!gameOver){
         j++;
-        p2Score.innerText=j;
-    }else if (p2Score.innerText===points.value && p1Score.innerText<points.value){
+        
+    if (j===parseInt(points.value)){
+        gameOver=true;
         p2Score.style.color = 'rgb(0, 255, 0)';
         p1Score.style.Color = 'rgb(255, 0, 0)';
         p1Button.disabled=true;
         p2Button.disabled=true;
     }
-
+    p2Score.innerText=j;    
+}
 })
 
 reset.addEventListener('click', function(e){
